@@ -17,6 +17,7 @@ public class OrderControllerV5 {
         this.template = new TraceTemplate(trace);
     }
 
+    
     @GetMapping("/v5/request")
     public String request(String itemId) {
         return template.execute("OrderController.request()", new TraceCallback<String>() {
